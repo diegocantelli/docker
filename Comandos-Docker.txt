@@ -57,3 +57,6 @@ Exibindo os logs de um container em exibição
 
 Exbindo as informações sobre o container
 	- docker container inspect ex-daemon-basic
+
+Baixando uma image do docker hub
+	- docker image pull redis:latest

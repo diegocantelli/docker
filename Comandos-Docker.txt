@@ -70,3 +70,6 @@ Criando uma tag para uma imagem
 
 Excluindo uma imagem
 	- docker image rm redis:latest
+
+Excluindo uma imagem pela sua tag
+	- docker image rm redis:latest teste-redis

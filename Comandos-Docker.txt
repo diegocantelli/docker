@@ -179,3 +179,6 @@ Subindo um servidor web rodando python
 
 Efetuando login no docker HUB
 	- docker login --username=diegocantelli19
+
+Enviando uma imagem local para o docker HUB
+	- docker image push <usuarioNoDockerHub>/simple-build:1.0

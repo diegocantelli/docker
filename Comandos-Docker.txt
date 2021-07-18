@@ -93,3 +93,20 @@ Buildando uma imagem com tag
 	- ex-simple-build: nome de imagem já existente
 	- diegocantelli19/simple-build: tag que será atribuída a imagem
 	- docker image tag ex-simple-build diegocantelli19/simple-build
+
+Buildando uma imagem com argumentos
+	- 1 passo: buildar a imagem
+		Exemplo: docker image build -t ex-build-arg .
+	- 2 passo: Rodar o container baseado na imagem acima
+		- 'echo $S3_BUCKET': Irá imprimir no console o valor default que está definido no dockerfile
+		como para o argumento $S3_BUCKET
+		Exemplo: docker container run ex-build-arg bash -c 'echo $S3_BUCKET'
+	Dockerfile:
+		FROM debian
+		LABEL maintainer 'Testes docker'
+
+		# define um argumento chamado S3_BUCKET
+		ARG S3_BUCKET=files
+		# set a variável de ambiente S3_BUCKET para o conteúdo que for definido no arg acima
+		# caso o usuário não passe nenhum argumento, o valor do argumento será files
+		ENV S3_BUCKET=${S3_BUCKET}

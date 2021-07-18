@@ -54,3 +54,6 @@ Executando um container em modo background
 
 Exibindo os logs de um container em exibição
 	- docker container logs ex-daemon-basic
+
+Exbindo as informações sobre o container
+	- docker container inspect ex-daemon-basic

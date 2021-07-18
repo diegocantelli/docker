@@ -188,3 +188,6 @@ Criando uma nova rede no docker
 
 Inspecionando uma rede
 	- docker network inspect nome_rede
+
+Executando um container para rodar sobre uma rede específica
+	docker container run -d --name container3 --net nome_red alpine sleep 1000

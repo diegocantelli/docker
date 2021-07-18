@@ -9,3 +9,6 @@ Listando todos os containers
 
 Verificando os containers que já foram executados
 	docker container ps -a
+
+Acessando o terminal do debian no modo interativo
+	docker container run -it debian bash

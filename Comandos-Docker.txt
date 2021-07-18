@@ -143,3 +143,36 @@ Copiando arquivos do host para o container
 		docker image build -t ex-build-copy
 	- Run
 		docker container run -p 8080:80 ex-build-copy
+
+
+
+Subindo um servidor web rodando python
+	Dockerfile
+		FROM python:3.6
+		LABEL maintaner 'Testes docker'
+
+		# && -> concatena os comandos
+		# \ -> quebra a linha entre os comandos
+		RUN useradd www && \
+			mkdir /app && \
+			mkdir /log && \
+    			chown www /log
+
+		# definindo o usuário que estará logado no momento em que os processos forem executados dentro do container
+		USER www
+
+		# cria um volume compartilhado
+		VOLUME /log
+
+		# indica qual é o diretório em que comandos como add, run, copy e etc deverão ser executados
+		WORKDIR /app
+
+		# define a porta que este container irá estar ao executar
+		EXPOSE 8000
+
+		# configura o processo que deverá ser executado, no caso o python, pois é necessário dele para podermos executar
+		# o script run.py
+		ENTRYPOINT ["/usr/local/bin/python"]
+
+		# na máquina host será executado este script
+		CMD [ "run.py" ]

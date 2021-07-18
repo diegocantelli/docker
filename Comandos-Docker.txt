@@ -3,3 +3,6 @@ Testando o docker
 
 Verificando containers que estão em execução
 	docker container ps
+
+Listando todos os containers
+	docker container ls -a

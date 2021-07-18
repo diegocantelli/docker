@@ -236,3 +236,6 @@ Finalizando o docker-compose
 
 Executando um comando em um serviço definido no docker compose
 	- docker-compose exec db psql -U postgres -c '\l'
+
+Exibindo os logs dos serviços que estão sendo executados pelo docker-compose
+	- docker-compose logs -f -t

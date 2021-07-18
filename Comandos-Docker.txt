@@ -224,3 +224,6 @@ Criando um arquivo docker-compose.yml
 Criando e inicializando os serviços definidos no arquivo docker compose
 	- Na pasta em estiver o arquivo .yml executar o comando abaixo
 		- docker-compose up
+
+Criando e inicializando os serviços definidos no arquivo docker compose no modo daemon
+	- docker-compose -d

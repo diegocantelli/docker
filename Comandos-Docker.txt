@@ -227,3 +227,6 @@ Criando e inicializando os serviços definidos no arquivo docker compose
 
 Criando e inicializando os serviços definidos no arquivo docker compose no modo daemon
 	- docker-compose -d
+
+Listando os docker-compose ativos
+	- docker-compose ps

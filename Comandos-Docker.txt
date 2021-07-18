@@ -182,3 +182,6 @@ Efetuando login no docker HUB
 
 Enviando uma imagem local para o docker HUB
 	- docker image push <usuarioNoDockerHub>/simple-build:1.0
+
+Criando uma nova rede no docker
+	- docker network create --driver bridge rede_nova

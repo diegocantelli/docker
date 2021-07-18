@@ -6,3 +6,6 @@ Verificando containers que estão em execução
 
 Listando todos os containers
 	docker container ls -a
+
+Verificando os containers que já foram executados
+	docker container ps -a

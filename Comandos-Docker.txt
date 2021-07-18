@@ -25,3 +25,10 @@ Nomeando um container
 
 Executando um container e removendo-o após a execução
 	- docker container run -rm debian
+
+Iniciando um container já existente
+	Inciando um container já existente
+	- start: irá iniciar um container já existente com todas as configurações
+	e arquivos já criados dentro dele.
+	- ai: inicia o container com o terminal atachado no modo interativo
+	docker container start -ai mydeb2

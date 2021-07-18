@@ -1,0 +1,2 @@
+Testando o docker
+	docker container run hello-world

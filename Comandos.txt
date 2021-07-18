@@ -1,0 +1,33 @@
+Testando o docker
+	docker container run hello-world
+
+Verificando containers que estão em execução
+	docker container ps
+
+Listando todos os containers
+	docker container ls -a
+
+Verificando os containers que já foram executados
+	docker container ps -a
+
+Acessando o terminal do debian no modo interativo
+	docker container run -it debian bash
+
+RUN
+	Este comando sempre criará um novo container, ou seja, se executarmos o comando acima
+	e criarmo um arquivo txt em um diretório qualquer, ao executarmos o comando docker container run
+	não existirá o arquivo txt criado anteriormente
+
+Nomeando um container
+	- Os containers precisam ter nomes únicos
+	docker container run --name mydeb2 -it debian bash
+
+
+Inciando um container já existente
+	- start: irá iniciar um container já existente com todas as configurações
+	e arquivos já criados dentro dele.
+	- ai: inicia o container com o terminal atachado no modo interativo
+	docker container start -ai mydeb2
+
+
+

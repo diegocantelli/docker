@@ -51,3 +51,6 @@ Mapeando uma pasta do host para uma pasta do container
 Executando um container em modo background
 	- -d: é a flag que indica que o container será executado no modo daemon(background)
 	- docker container run -d --name ex-daemon-basic -p 8080:80 -v C:\Users\Prosoft\repos\ex-volume\html:/usr/share/nginx/html nginx
+
+Exibindo os logs de um container em exibição
+	- docker container logs ex-daemon-basic

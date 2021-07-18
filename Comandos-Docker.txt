@@ -176,3 +176,6 @@ Subindo um servidor web rodando python
 
 		# na máquina host será executado este script
 		CMD [ "run.py" ]
+
+Efetuando login no docker HUB
+	- docker login --username=diegocantelli19

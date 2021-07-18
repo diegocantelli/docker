@@ -12,3 +12,8 @@ Verificando os containers que já foram executados
 
 Acessando o terminal do debian no modo interativo
 	docker container run -it debian bash
+
+RUN
+	Este comando sempre criará um novo container, ou seja, se executarmos o comando acima
+	e criarmo um arquivo txt em um diretório qualquer, ao executarmos o comando docker container run
+	não existirá o arquivo txt criado anteriormente

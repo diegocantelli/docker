@@ -82,3 +82,9 @@ Criando a primeira imagem
 		FROM nginx:latest
 		# grava o hello world em um arquivo chamado index.html
 		RUN echo '<h1> Hello World!</h1>' > /usr/share/nginx/html/index.html
+
+Buildando a imagem
+	- -t: serve para indicar a tag a que esse build de imagem será associado
+	- o ponto no final do comando serve para indicar que a imagem será buildada com base em um arquivo
+	Dockerfile que se encontra no diretório atual
+	docker image build -t ex-simple-build .

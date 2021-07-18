@@ -67,3 +67,6 @@ Listando todas as imagens disponíveis localmente
 Criando uma tag para uma imagem
 	- será atribuído um novo nome para a mesma imagem
 	- docker image tag redis:latest teste-redis
+
+Excluindo uma imagem
+	- docker image rm redis:latest

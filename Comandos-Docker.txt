@@ -63,3 +63,7 @@ Baixando uma image do docker hub
 
 Listando todas as imagens disponíveis localmente
 	- docker image ls
+
+Criando uma tag para uma imagem
+	- será atribuído um novo nome para a mesma imagem
+	- docker image tag redis:latest teste-redis

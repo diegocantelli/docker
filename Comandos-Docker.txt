@@ -128,3 +128,18 @@ Buildando uma imagem passando argumentos dinamicamente
 		# set a variável de ambiente S3_BUCKET para o conteúdo que for definido no arg acima
 		# caso o usuário não passe nenhum argumento, o valor do argumento será files
 		ENV S3_BUCKET=${S3_BUCKET}
+
+
+Copiando arquivos do host para o container
+	Dockerfile:
+		FROM nginx:latest
+		LABEL mainteiner 'Copiando arquivos'
+
+		RUN echo '<h1>Sem conteúdo</h1>' > /usr/share/nginx/html/conteudo.html
+		# copia todos os arquivos com extensão .html para o diretório especificado
+		COPY *.html /usr/share/nginx/html/
+
+	- Build
+		docker image build -t ex-build-copy
+	- Run
+		docker container run -p 8080:80 ex-build-copy

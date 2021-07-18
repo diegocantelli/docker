@@ -41,3 +41,9 @@ Executando um container e expondo um serviço através de uma porta
 	- 8080: é a porta na qual será exposto o serviço
 	- 80: é a porta na qual o serviço irá rodar internamente dentro do container
 	- docker container run -p 8080:80 nginx
+
+Mapeando uma pasta do host para uma pasta do container
+	- -v: indica o parâmetro de volume	-
+	- C:\Users\Prosoft\repos\ex-volume: indica a pasta no host que se deseja mapear
+	- /usr/share/nginx/html: indica a pasta no container que se deseja fazer o mapeamento
+	docker container run -p 8080:80 -v C:\Users\Prosoft\repos\ex-volume:/usr/share/nginx/html nginx

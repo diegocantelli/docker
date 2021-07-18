@@ -191,3 +191,7 @@ Inspecionando uma rede
 
 Executando um container para rodar sobre uma rede específica
 	docker container run -d --name container3 --net nome_red alpine sleep 1000
+
+
+Disconectando uma interface de rede do container
+	docker network disconnect bridge container3

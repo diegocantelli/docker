@@ -110,3 +110,21 @@ Buildando uma imagem com argumentos
 		# set a variável de ambiente S3_BUCKET para o conteúdo que for definido no arg acima
 		# caso o usuário não passe nenhum argumento, o valor do argumento será files
 		ENV S3_BUCKET=${S3_BUCKET}
+
+Buildando uma imagem passando argumentos dinamicamente
+	- 1 passo: buildar a imagem
+		- --build-arg: é a flag que indica que estamos passando um valor para o argumento definido na imagem
+		Exemplo: docker image build --build-arg S3_BUCKET=myapp -t ex-build-arg .
+	- 2 passo: Rodar o container baseado na imagem acima
+		- 'echo $S3_BUCKET': Irá imprimir no console o valor default que está definido no dockerfile
+		como para o argumento $S3_BUCKET
+		Exemplo: docker container run ex-build-arg bash -c 'echo $S3_BUCKET'
+	Dockerfile:
+		FROM debian
+		LABEL maintainer 'Testes docker'
+
+		# define um argumento chamado S3_BUCKET
+		ARG S3_BUCKET=files
+		# set a variável de ambiente S3_BUCKET para o conteúdo que for definido no arg acima
+		# caso o usuário não passe nenhum argumento, o valor do argumento será files
+		ENV S3_BUCKET=${S3_BUCKET}

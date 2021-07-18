@@ -195,3 +195,27 @@ Executando um container para rodar sobre uma rede específica
 
 Disconectando uma interface de rede do container
 	docker network disconnect bridge container3
+
+
+Criando um arquivo docker-compose.yml
+	Exemplo:
+	version: '3'
+		services: 
+    		# este será o serviço que sérá exposto para servir de conexão ao bd no arquivo app.js
+    			db:
+        			image: mongo:3.4
+    			backend:
+        			image: node:8.l
+        			# mapeando a pasta backend do host com a pasta backend do container
+        			volumes: 
+            				- ./backend:/backend
+        			ports:
+            				- 3000:3000
+        			# muda para a pasta backend, instala as dependências do package.json e executa o app.js
+        			command: bash -c "cd /backend && npm i && node app"
+    			frontend:
+        			image: nginx:1.13
+        			volumes:
+            				- ./frontend:/usr/share/nginx/html/
+        			ports:
+            				- 80:80

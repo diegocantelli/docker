@@ -22,3 +22,6 @@ Nomeando um container
 
 	- Os containers precisam ter nomes únicos
 	docker container run --name mydeb2 -it debian bash
+
+Executando um container e removendo-o após a execução
+	- docker container run -rm debian

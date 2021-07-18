@@ -1,2 +1,5 @@
 Testando o docker
 	docker container run hello-world
+
+Verificando containers que estão em execução
+	docker container ps

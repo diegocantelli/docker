@@ -233,3 +233,6 @@ Listando os docker-compose ativos
 
 Finalizando o docker-compose
 	- docker-compose down
+
+Executando um comando em um serviço definido no docker compose
+	- docker-compose exec db psql -U postgres -c '\l'

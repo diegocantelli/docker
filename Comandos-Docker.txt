@@ -230,3 +230,6 @@ Criando e inicializando os serviços definidos no arquivo docker compose no modo
 
 Listando os docker-compose ativos
 	- docker-compose ps
+
+Finalizando o docker-compose
+	- docker-compose down

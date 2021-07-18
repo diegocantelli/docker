@@ -88,3 +88,8 @@ Buildando a imagem
 	- o ponto no final do comando serve para indicar que a imagem será buildada com base em um arquivo
 	Dockerfile que se encontra no diretório atual
 	docker image build -t ex-simple-build .
+
+Buildando uma imagem com tag
+	- ex-simple-build: nome de imagem já existente
+	- diegocantelli19/simple-build: tag que será atribuída a imagem
+	- docker image tag ex-simple-build diegocantelli19/simple-build

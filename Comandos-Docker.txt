@@ -35,3 +35,9 @@ Iniciando um container já existente
 
 Parando um container no Windows
 	docker container stop NomeDoContainer
+
+Executando um container e expondo um serviço através de uma porta
+	- -p é o parâmetro de porta
+	- 8080: é a porta na qual será exposto o serviço
+	- 80: é a porta na qual o serviço irá rodar internamente dentro do container
+	- docker container run -p 8080:80 nginx

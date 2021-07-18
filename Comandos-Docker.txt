@@ -32,3 +32,6 @@ Iniciando um container já existente
 	e arquivos já criados dentro dele.
 	- ai: inicia o container com o terminal atachado no modo interativo
 	docker container start -ai mydeb2
+
+Parando um container no Windows
+	docker container stop NomeDoContainer

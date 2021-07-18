@@ -60,3 +60,6 @@ Exbindo as informações sobre o container
 
 Baixando uma image do docker hub
 	- docker image pull redis:latest
+
+Listando todas as imagens disponíveis localmente
+	- docker image ls

@@ -73,3 +73,12 @@ Excluindo uma imagem
 
 Excluindo uma imagem pela sua tag
 	- docker image rm redis:latest teste-redis
+
+Criando a primeira imagem
+
+	Para se criar uma imagem do docker é necessário primeiro criar um arquivo dentro de um diretório chamado: Dockerfile
+	Dentro do arquivo Dockerfile deve conter o descritos de como será composta esta imagem
+	Exemplo: 
+		FROM nginx:latest
+		# grava o hello world em um arquivo chamado index.html
+		RUN echo '<h1> Hello World!</h1>' > /usr/share/nginx/html/index.html

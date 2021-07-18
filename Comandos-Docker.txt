@@ -17,3 +17,8 @@ RUN
 	Este comando sempre criará um novo container, ou seja, se executarmos o comando acima
 	e criarmo um arquivo txt em um diretório qualquer, ao executarmos o comando docker container run
 	não existirá o arquivo txt criado anteriormente
+
+Nomeando um container
+
+	- Os containers precisam ter nomes únicos
+	docker container run --name mydeb2 -it debian bash

@@ -47,3 +47,7 @@ Mapeando uma pasta do host para uma pasta do container
 	- C:\Users\Prosoft\repos\ex-volume: indica a pasta no host que se deseja mapear
 	- /usr/share/nginx/html: indica a pasta no container que se deseja fazer o mapeamento
 	docker container run -p 8080:80 -v C:\Users\Prosoft\repos\ex-volume:/usr/share/nginx/html nginx
+
+Executando um container em modo background
+	- -d: é a flag que indica que o container será executado no modo daemon(background)
+	- docker container run -d --name ex-daemon-basic -p 8080:80 -v C:\Users\Prosoft\repos\ex-volume\html:/usr/share/nginx/html nginx

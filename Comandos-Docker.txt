@@ -239,3 +239,6 @@ Executando um comando em um serviço definido no docker compose
 
 Exibindo os logs dos serviços que estão sendo executados pelo docker-compose
 	- docker-compose logs -f -t
+
+Executando comandos no terminal de um container
+	- docker exec -it nome_container bash

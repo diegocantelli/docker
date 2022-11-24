@@ -30,3 +30,9 @@ docker port 09a71cb95673a4f
 
 docker run -d -p 8989:80 dockersamples/static-site
 	- o parametro -p permite realizar o mapeamento de portas entre o host e o 	  container. porta_host:porta_container
+
+docker build -t diegocantelli/app-node:1.0 .
+	- cria a imagem que definimos no dockerfile
+
+docker stop $(docker container ls -q)
+	- para todos os containers em execução

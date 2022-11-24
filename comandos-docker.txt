@@ -1,0 +1,32 @@
+Docker run ubuntu
+	- verifica se a imagem do Ubuntu já existe baixada na nossa máquina, caso não ele baixa e executa a imagem que foi baixada, caso já exista ele apenas executa o contêiner da imagem Ubuntu
+
+Docker ps ou docker container ls
+	- lista os conteiners em execução	
+
+Docker	ps -a ou docker container ls -a
+	- lista todos os conteiners em execução	ou não	
+
+Docker stop [container_id] ou name
+	- para a execução	 de um container
+
+Docker start  [container_id] ou name
+	- reinicia a execução	de um container criado anteriormente
+
+Docker exec -it container_id bash
+	- executa o bash de forma interativa dentro do container
+
+Docker run -it ubuntu bash
+	- executa o container e disponibiliza o bash de forma interativa
+
+Docker run -d dockersamples/static-site
+	- o parâmetro -d significa que irá executar o container sem travar o terminal, 	  deixando-o liberado para uso
+
+docker run -d -P dockersamples/static-site
+	- o parâmetro -P faz o mapeamento das portas do container para portas do host
+
+docker port 09a71cb95673a4f
+	- exibe o mapeamento de portas entre o container e o host
+
+docker run -d -p 8989:80 dockersamples/static-site
+	- o parametro -p permite realizar o mapeamento de portas entre o host e o 	  container. porta_host:porta_container

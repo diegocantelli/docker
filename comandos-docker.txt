@@ -21,7 +21,7 @@ Docker run -it ubuntu bash
 
 docker run -it --name ubuntu1 ubuntu bash
 	- criando e executando um container definindo um nome para o mesmo
-	
+
 Docker run -d dockersamples/static-site
 	- o parâmetro -d significa que irá executar o container sem travar o terminal, 	  deixando-o liberado para uso
 
@@ -61,3 +61,5 @@ docker volume ls
 
 docker run -it -v meu-volume:/app ubuntu bash
 	- utilizando o volume criado anteriormente para fazer o mapeamento entre os diretorios do container e do host
+
+docker network create --driver bridge minha-bridge

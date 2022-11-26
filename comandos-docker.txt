@@ -39,3 +39,6 @@ docker stop $(docker container ls -q)
 
 docker container rm $(docker container ls -aq) --force  
 	- removendo todos os containers 
+
+docker rmi $(docker image ls -aq)
+	- removendo todas as imagens

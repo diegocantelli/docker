@@ -42,3 +42,7 @@ docker container rm $(docker container ls -aq) --force
 
 docker rmi $(docker image ls -aq)
 	- removendo todas as imagens
+
+docker run -it -v /Users/diegocantelli/Documents/repos/docker-alura/volume-docker:/app ubuntu bash
+	- criando um volume dentro do container e persistindo os dados criados dentro deste volume no diretorio em que foi mapeado
+	no host

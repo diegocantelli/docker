@@ -49,3 +49,12 @@ docker run -it -v /Users/diegocantelli/Documents/repos/docker-alura/volume-docke
 
 docker run -it --mount type=bind,source=/Users/diegocantelli/Documents/repos/docker-alura/volume-docker,target=/app ubuntu bash
 	- criando volumes utilizando a flag --mount
+
+docker volume create meu-volume
+	- criando um volume no docker
+
+docker volume ls
+	- listando volumes no docker
+
+docker run -it -v meu-volume:/app ubuntu bash
+	- utilizando o volume criado anteriormente para fazer o mapeamento entre os diretorios do container e do host

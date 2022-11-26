@@ -19,6 +19,9 @@ Docker exec -it container_id bash
 Docker run -it ubuntu bash
 	- executa o container e disponibiliza o bash de forma interativa
 
+docker run -it --name ubuntu1 ubuntu bash
+	- criando e executando um container definindo um nome para o mesmo
+	
 Docker run -d dockersamples/static-site
 	- o parâmetro -d significa que irá executar o container sem travar o terminal, 	  deixando-o liberado para uso
 

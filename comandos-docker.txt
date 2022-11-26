@@ -63,3 +63,6 @@ docker run -it -v meu-volume:/app ubuntu bash
 	- utilizando o volume criado anteriormente para fazer o mapeamento entre os diretorios do container e do host
 
 docker network create --driver bridge minha-bridge
+
+docker run -it --name ubuntu1 --network minha-bridge  ubuntu bash
+	- cria um container e o executa especificando em network ele estará disponível

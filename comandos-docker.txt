@@ -36,3 +36,6 @@ docker build -t diegocantelli/app-node:1.0 .
 
 docker stop $(docker container ls -q)
 	- para todos os containers em execução
+
+docker container rm $(docker container ls -aq) --force  
+	- removendo todos os containers 

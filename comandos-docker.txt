@@ -46,3 +46,6 @@ docker rmi $(docker image ls -aq)
 docker run -it -v /Users/diegocantelli/Documents/repos/docker-alura/volume-docker:/app ubuntu bash
 	- criando um volume dentro do container e persistindo os dados criados dentro deste volume no diretorio em que foi mapeado
 	no host
+
+docker run -it --mount type=bind,source=/Users/diegocantelli/Documents/repos/docker-alura/volume-docker,target=/app ubuntu bash
+	- criando volumes utilizando a flag --mount
